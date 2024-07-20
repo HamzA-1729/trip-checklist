@@ -19,6 +19,9 @@ function App() {
       )
     );
   };
+  const handleDeleteAll = () => {
+    setItems([]);
+  };
   return (
     <div className="app">
       <Logo />
@@ -27,6 +30,7 @@ function App() {
         items={items}
         onDeleteItems={handleDeleteItems}
         onToggleItem={handleToggleItem}
+        onClearList={handleDeleteAll}
       />
       <Stats items={items} />
     </div>
